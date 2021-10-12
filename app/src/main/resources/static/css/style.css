@@ -1,0 +1,25 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    background-color: rgb(167, 170, 172);
+}
+
+.card-header-first, .card-header-title {
+    height: 100px;
+    background:#212529;
+    box-shadow:1px 5px 15px #a2a2a2;
+}
+.content-card{
+    padding: 25px;
+}
+.homeCard, .contentTable{
+    margin-top: 25px;
+}
+.edit {
+    display: none;
+}
+.tableRow:hover .edit{
+    display: table-row;
+    position: fixed;
+}

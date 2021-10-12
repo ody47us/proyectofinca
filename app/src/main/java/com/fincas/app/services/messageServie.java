@@ -28,7 +28,7 @@ public class messageServie {
             if (thisMessage.isEmpty()) {
                 return msgRepo.save(message);
             }
-            return thisMessage.get();
+            return null;
         }
         return msgRepo.save(message);
     }
@@ -44,7 +44,7 @@ public class messageServie {
                 return msgRepo.save(thisMessage);
             }
         }
-        return message;
+        return null;
     }
 
     public boolean delete(long id){

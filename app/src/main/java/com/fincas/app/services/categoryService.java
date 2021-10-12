@@ -29,7 +29,7 @@ public class categoryService {
             if(thisCategory.isEmpty()){
                 return categoryRep.save(category);
             }
-            return thisCategory.get();
+            return null;
         }
         return categoryRep.save(category);
     }
@@ -48,7 +48,7 @@ public class categoryService {
                 return thisCategory;
             }
         }
-        return category;
+        return null;
     }
 
     public boolean delete(long id){

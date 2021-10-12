@@ -33,7 +33,7 @@ public class reservatioService {
             if(opReserv.isEmpty()){
                 return resRep.save(reservation);        
             }
-            return opReserv.get();
+            return null;
         }
         return resRep.save(reservation);
     }
@@ -59,7 +59,7 @@ public class reservatioService {
                 return resRep.save(thisReserv);
             }
         }
-        return reservation;
+        return null;
     }
 
     public Boolean delete(long id){

@@ -28,12 +28,12 @@ public class farmService {
             if(thisFarm.isEmpty()){
                 return farmRep.save(farm);
             }
-            return thisFarm.get();
+            return null;
         }
         return farmRep.save(farm);
     }
 
-    public farmEntity updaate(farmEntity farm){
+    public farmEntity update(farmEntity farm){
         if(farm.getId() != null){
             Optional<farmEntity> opFarm = farmRep.getFarmByID(farm.getId());
             if(opFarm.isPresent()){
@@ -41,11 +41,14 @@ public class farmService {
                 if(farm.getAddress() != null){
                     thisFarm.setAddress(farm.getAddress());
                 }
+                if(farm.getDescription() != null){
+                    thisFarm.setDescription(farm.getDescription());
+                }
                 if(farm.getCategory() != null){
                     thisFarm.setCategory(farm.getCategory());
                 }
-                if(farm.getExension() != null){
-                    thisFarm.setExension(farm.getExension());
+                if(farm.getExtension() != null){
+                    thisFarm.setExtension(farm.getExtension());
                 }
                 if(farm.getName() != null){
                     thisFarm.setName(farm.getName());
@@ -53,7 +56,7 @@ public class farmService {
                 return farmRep.save(thisFarm);
             }
        }
-       return farm;
+       return null;
     }
 
     public boolean delete(long id){
