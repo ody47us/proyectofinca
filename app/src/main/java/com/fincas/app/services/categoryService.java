@@ -45,7 +45,7 @@ public class categoryService {
                 if(category.getDescription() != null){
                     thisCategory.setDescription(category.getDescription());
                 }
-                return thisCategory;
+                return categoryRep.save(category);
             }
         }
         return null;

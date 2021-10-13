@@ -27,4 +27,9 @@ public class viewsController {
         model.addAttribute("title", "Messages");
         return "messages";
     }
+    @GetMapping("/categories")
+    public String categoriesView(Model model){
+        model.addAttribute("title", "Categories");
+        return "categories";
+    }
 }
