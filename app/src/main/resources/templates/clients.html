@@ -10,64 +10,57 @@
 </head>
 <body class="row justify-content-center">
     <nav th:replace = fragments/header.html::header></nav>
-    <div class="container" id="messagesTable">
+    <div class="container" id="ClientTable">
         <div class="row justify-content-center">
             <div class="col-lg-6 contentTable">
                 <table class="table table-striped table-light">
                     <thead class="table-dark">
                         <th scope="col">ID</th>
-                        <th scope="col">Message Text</th>
+                        <th scope="col">NAME</th>
+                        <th scope="col">PASSWORD</th>
+                        <th scope="col">EMAIL</th>
+                        <th scope="col">AGE</th>
                     </thead>
-                    <tbody id="messagesRows">
+                    <tbody id="ClientsRows">
                     </tbody>
                     <tfoot>
-                        <td colspan="5" class="text-center"><a class="btn btn-secondary btn-sm btn-add-message">Add</a></td>
+                        <td colspan="5" class="text-center"><a class="btn btn-secondary btn-sm" id= "SubmitClient">Add</a></td>
                     </tfoot>
                 </table>
             </div>
         </div>
     </div>
-    <div class="position-fixed zindex-fixed" id="inputContainer" style="display: none;">
-        <div class="container position-fixed top-50 start-50 translate-middle bg-transparent">
+    
+    <div class="position-absolute zindex-fixed" id="inputContainer" style="display: none;">
+        <div class="container position-absolute start-50 translate-middle bg-transparent" style="top: 120px;bottom: 0px;">
             <div class="row justify-content-center bg-transparent">
-                <div class="col-xl-4 col-sm-8 mb-5 bg-transparent">
+                <div class="col-xl-6 col-sm-8 mb-5 bg-transparent">
                     <div class="bg-white rounded shadow-sm py-5 px-4" id = 'inputs'>
                         <h5 class="mb-2 text-center">Insert Data</h5>
-                        <div class="input-group mb-3" id="idInput">
+                        <div class="input-group mb-3" id="idInputG">
                             <span class="input-group-text">ID</span>
                             <input type="number" class="form-control" id="idInput" disabled>
                         </div>
                         <div class="input-group mb-3">
-                            <span class="input-group-text">Text</span>
-                            <input type="text" class="form-control" id="textInput">
-                        </div>
-                        <div class="d-flex justify-content-evenly bg-transparent" id='#userController'>
-                            <a href="#" class="btn btn-secondary" id="uploadMessage">Submit</a>
-                            <a href="#" class="btn btn-secondary" id="removeMessage">Delete</a>
-                            <a href="#" class="btn btn-secondary" id="addMessage" style="display: none;">Add</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div><div class="position-fixed zindex-fixed" id="inputContainer">
-        <div class="container position-fixed top-50 start-50 translate-middle bg-transparent">
-            <div class="row justify-content-center bg-transparent">
-                <div class="col-xl-4 col-sm-8 mb-5 bg-transparent">
-                    <div class="bg-white rounded shadow-sm py-5 px-4" id = 'inputs'>
-                        <h5 class="mb-2 text-center">Insert Data</h5>
-                        <div class="input-group mb-3" id="idInput">
-                            <span class="input-group-text">ID</span>
-                            <input type="number" class="form-control" id="idInput" disabled>
+                            <span class="input-group-text">Name</span>
+                            <input type="text" class="form-control" id="NameInput">
                         </div>
                         <div class="input-group mb-3">
-                            <span class="input-group-text">Text</span>
-                            <input type="text" class="form-control" id="textInput">
+                            <span class="input-group-text">Password</span>
+                            <input type="text" class="form-control" id="PasswordInput">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Email</span>
+                            <input type="text" class="form-control" id="EmailInput">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Age</span>
+                            <input type="number" class="form-control" id="AgeInput">
                         </div>
                         <div class="d-flex justify-content-evenly bg-transparent" id='#userController'>
-                            <a href="#" class="btn btn-secondary" id="uploadMessage">Submit</a>
-                            <a href="#" class="btn btn-secondary" id="removeMessage">Delete</a>
-                            <a href="#" class="btn btn-secondary" id="addMessage" style="display: none;">Add</a>
+                            <a href="#" class="btn btn-secondary" id="uploadClient">Submit</a>
+                            <a href="#" class="btn btn-secondary" id="removeClient">Delete</a>
+                            <a href="#" class="btn btn-secondary" id="addClient" style="display: none;">Add</a>
                         </div>
                     </div>
                 </div>

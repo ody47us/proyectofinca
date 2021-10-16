@@ -29,20 +29,19 @@
                     <tbody id="farmsRows">
                     </tbody>
                     <tfoot>
-                        <td colspan="6" class="text-center"><a class="btn btn-secondary btn-sm btn-add-farm">Add</a>
-                        </td>
+                        <td colspan="6" class="text-center"><a class="btn btn-secondary btn-sm" id="sumbitFarm">Add</a></td>
                     </tfoot>
                 </table>
             </div>
         </div>
     </div>
     <div class="position-absolute zindex-fixed" id="inputContainer" style="display: none;">
-        <div class="container position-fixed top-50 start-50 translate-middle bg-transparent">
+        <div class="container position-absolute start-50 translate-middle bg-transparent" style="top: 120px;bottom: 0px;">
             <div class="row justify-content-center bg-transparent">
-                <div class="col-xl-4 col-sm-8 mb-5 bg-transparent">
+                <div class="col-xl-6 col-sm-8 mb-5 bg-transparent">
                     <div class="bg-white rounded shadow-sm py-5 px-4" id='inputs'>
                         <h5 class="mb-2 text-center">Insert Data</h5>
-                        <div class="input-group mb-3" id="idInput">
+                        <div class="input-group mb-3" id="idInputG">
                             <span class="input-group-text">ID</span>
                             <input type="number" class="form-control" id="idInput" disabled>
                         </div>
@@ -55,7 +54,7 @@
                             <input type="text" class="form-control" id="addressInput">
                         </div>
                         <div class="input-group mb-3">
-                            <span class="input-group-text">Exension</span>
+                            <span class="input-group-text">Extencion</span>
                             <input type="number" class="form-control" id="exensionInput">
                         </div>
                         <div class="input-group mb-3">
@@ -74,7 +73,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+    </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"

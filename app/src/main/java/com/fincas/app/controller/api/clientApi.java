@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import com.fincas.app.controller.api.exeptions.notFoundException;
+import com.fincas.app.controller.api.exeptions.unaceptableException;
 import com.fincas.app.crud.clients.clientEntity;
 import com.fincas.app.services.clientService;
 
@@ -41,6 +42,13 @@ public class clientApi {
             throw new notFoundException("Client with id: " + id+ " not exist");
         }
         return exist.get();
+    }
+    @PostMapping
+    public void addClient(@RequestBody clientEntity body){
+        clientEntity exist = clientService.saveClient(body);
+        if(exist == null){
+            throw new unaceptableException("There is already a client with the id: " + body.getId());
+        }
     }
     @GetMapping List<clientEntity> getEveryClients(){
         return clientService.getAllClients();
